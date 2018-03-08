@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Homework #6</title>
+  <style type="text/css">
+    button,
+    div,
+    form,
+    input {
+      margin: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Gifs</h1>
+
+     <!-- Rendered Buttons will get Dumped Here  -->
+    <div id="buttons-view"></div>
+
+    <form id="gif-form">
+      <label for="gif-input">Add another type of gif</label>
+      <input type="text" id="gif-input"><br>
+
+      <!-- Button triggers new gif to be added -->
+      <input id="add-gif" type="submit" value="Add a Gif">
+    </form>
+
+    <div id="gifs-appear-here"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript"></script>
+    <script src="code.js"></script>
+    
+  </div>
+</body>
+
+</html>
