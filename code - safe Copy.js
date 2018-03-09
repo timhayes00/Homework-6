@@ -21,7 +21,7 @@ renderButtons();
 
 
 //dynamicly renders 10 new gifs with their G/PG/PG13/etc
-$("#buttons-view").on("click", "button", function() {
+$("button").on("click", function() {
     console.log("button clicked");
     var gifDisplay = $(this).attr("data-name");
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
@@ -37,13 +37,16 @@ $("#buttons-view").on("click", "button", function() {
           var gifDiv = $("<div class='item'>");
 
           var rating = results[i].rating;
-          var p = $("<h4>").text("Rating: " + rating);
+          var p = $("<p>").text("Rating: " + rating);
 
           var gifUrl = $("<img>");
           
           gifUrl.attr("src", results[i].images.fixed_height_small.url);
+          console.log(results[i].images.fixed_height_small.url);
           gifDiv.prepend(p);
           gifDiv.prepend(gifUrl);
+          console.log(gifDiv);
+
           $("#gifs-appear-here").prepend(gifDiv);
         }
       });
