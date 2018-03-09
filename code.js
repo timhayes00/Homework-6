@@ -30,7 +30,7 @@ $("#add-gif").on("click", function(event) {
 
   var gif = $("#gif-input").val().trim();
 
-  gifArray.push(gif);
+  gifArray.append(gif);
 
   renderButtons();
 });
